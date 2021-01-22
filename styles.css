@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+hr.left{
+  border-top: solid 2px #355594;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  width: 70%;
+  }
+
+hr.left:after {
+  	content: '';
+  	display: block;
+  	margin-top: 3px;
+    border-top: solid 2px #355594;
+    width: 95%;
+  }
+
+hr.right{
+  margin-left:30%;
+  border-top: solid 2px #355594;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  width: 70%;
+}
+
+hr.right:after {
+  	content: '';
+  	display: block;
+  	margin-top: 3px;
+    border-top: solid 2px #355594;
+    width: 95%;
+    margin-left: 5%;
+  }
+
+.page{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Lato, sans-serif;
+  color: #2b2c2e;
+}
+
+.title{
+  background-color: orange;
+}
+
+.presentation{
+  background-color: yellow;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.portrait{
+  width: 150px;
+  border-radius: 50%;
+  border-style:double;
+  border-color: #355594;
+  border-width: thick;
+  }
+
+.submenu{
+  background-color: red;
+}
+
+.submenu > li{
+  display: inline;
+  text-align: justify;
+  list-style: none;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  }
+
+.about_me{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  }
+
+.subtitle_column_left{
+  display: flex;
+  flex:initial;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 35%;
+  color: #355594;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  }
+
+.subtitle_column_right{
+  display: flex;
+  flex: initial;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 35%;
+  color: #355594;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 1.5em;
+  }
+
+.text_column_left{
+  flex: initial;
+  width: 65%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: justify;
+  color: #2b2c2e;
+  }
+
+.text_column_right{
+  flex: initial;
+  width: 65%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: justify;
+  }
+
+@media only screen and (max-width: 400px) {
+  .page {
+    background-color: #F09A9D; /* Red */
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .page {
+    background-color: #F5CF8E; /* Yellow */
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  .page {
+    width: 960px;
+    margin: 0 auto;
+    background-color: blue;
+  }
+  .presentation{
+    padding-left:50px;
+    padding-right:50px;
+  }
+}
