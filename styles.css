@@ -62,7 +62,7 @@ hr.right:after {
   padding-bottom: 20px;
   border-bottom: solid 2px #355594;
   position: relative;
-  padding-right: 20px;
+  margin-right: 20px;
 }
 
 .name:after{
@@ -79,8 +79,7 @@ hr.right:after {
   justify-content: flex-start;
   align-items: center;
   padding-top:20px;
-  padding-left:20px;
-}
+  }
 
 .portrait{
   width: 150px;
@@ -93,18 +92,31 @@ hr.right:after {
 .submenu{
   background-color: #132447;
   color: white;
-  padding-left: 20px;
   padding-top: 30px;
   padding-bottom: 10px;
-}
+  padding-left: 20px;
+  }
 
 .submenu > li{
   display: inline;
   text-align: justify;
   list-style: none;
-  margin-right:10px;
+  padding-right:10px;
   border-right: solid 1px white;
-  padding-right: 10px;
+  margin-left: 10px;
+}
+
+.submenu > li:last-child{
+  padding-right:0px;
+  border-right: none;
+}
+
+.submenu > li:first-child{
+  margin-left: 0px;
+}
+
+.menu_break{
+  display: none;
 }
 
 .submenu > li > a{
@@ -117,20 +129,9 @@ hr.right:after {
   color: white;
 }
 
-.submenu > li > a:active{
-  text-decoration:underline;
-  color: white;
-  }
-
 .submenu > li > a:visited{
   text-decoration: none;
   color: white;
-}
-
-.submenu > li:last-child{
-  margin-right:0px;
-  border-right: none;
-  padding-right: 0px;
 }
 
 .content{
@@ -151,6 +152,7 @@ hr.right:after {
 .subtitle_column_left{
   display: flex;
   flex:initial;
+  flex-shrink: 0;
   align-items: flex-start;
   justify-content: flex-start;
   width: 35%;
@@ -159,11 +161,13 @@ hr.right:after {
   padding-bottom: 20px;
   text-transform: uppercase;
   font-size: 1.5em;
+  padding-right: 20px;
   }
 
 .subtitle_column_right{
   display: flex;
   flex: initial;
+  flex-shrink: 0;
   align-items: flex-start;
   justify-content: flex-end;
   width: 35%;
@@ -173,6 +177,7 @@ hr.right:after {
   text-transform: uppercase;
   text-align: right;
   font-size: 1.5em;
+  padding-left: 20px;
   }
 
 .text_column_left{
@@ -214,6 +219,18 @@ hr.right:after {
     margin-left: 0%;
   }
 
+  .submenu > li:last-child{
+    margin-left: 0px;
+  }
+
+  .menu_break{
+    display: block;
+  }
+
+  .submenu{
+    line-height: 150%;
+  }
+
   .about_me{
     flex-direction: column;
   }
@@ -223,11 +240,17 @@ hr.right:after {
     padding-bottom: 0px;
   }
 
+  .presentation{
+    padding-left: 10px;
+    maring-right: 10px;
+  }
+
   .subtitle_column_right{
     width: 100%;
     text-align: left;
     justify-content: flex-start;
     padding-bottom: 0px;
+    padding-left: 0px;
   }
 
   .text_column_left{
@@ -245,6 +268,10 @@ hr.right:after {
 
 @media only screen and (min-width: 421px) and (max-width: 960px) {
 
+  .presentation{
+    padding-left: 20px;
+  }
+
 }
 
 @media only screen and (min-width: 961px) {
@@ -256,6 +283,7 @@ hr.right:after {
   .presentation{
     width: 940px;
     margin: 0 auto;
+    padding-left: 20px;
   }
 
   .submenu{
