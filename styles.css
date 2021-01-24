@@ -43,18 +43,43 @@ hr.right:after {
   flex-direction: column;
   height: 100vh;
   font-family: Lato, sans-serif;
-  color: #2b2c2e;
+  font-size: 12;
+  color: #444444;
+}
+
+.header{
+  background-color: #132447;
+  color: white;
 }
 
 .title{
   background-color: orange;
+  padding-left: 20px;
+}
+
+.name{
+  margin-left: 20px;
+  padding-bottom: 20px;
+  border-bottom: solid 2px #355594;
+  position: relative;
+  padding-right: 20px;
+}
+
+.name:after{
+  content: '';
+  display: block;
+  margin-top: 25px;
+  border-top: solid 2px #355594;
+  width: 90%;
+  position: absolute;
 }
 
 .presentation{
-  background-color: yellow;
   display:flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
+  padding-top:20px;
+  padding-left:20px;
 }
 
 .portrait{
@@ -66,13 +91,46 @@ hr.right:after {
   }
 
 .submenu{
-  background-color: red;
+  background-color: #132447;
+  color: white;
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 
 .submenu > li{
   display: inline;
   text-align: justify;
   list-style: none;
+  margin-right:10px;
+  border-right: solid 1px white;
+  padding-right: 10px;
+}
+
+.submenu > li > a{
+  text-decoration: none;
+  color: white;
+}
+
+.submenu > li > a:hover{
+  text-decoration: underline;
+  color: white;
+}
+
+.submenu > li > a:active{
+  text-decoration:underline;
+  color: white;
+  }
+
+.submenu > li > a:visited{
+  text-decoration: none;
+  color: white;
+}
+
+.submenu > li:last-child{
+  margin-right:0px;
+  border-right: none;
+  padding-right: 0px;
 }
 
 .content{
@@ -123,8 +181,8 @@ hr.right:after {
   padding-top: 40px;
   padding-bottom: 40px;
   text-align: justify;
-  color: #2b2c2e;
-  }
+  color: #444444;
+    }
 
 .text_column_right{
   flex: initial;
@@ -134,7 +192,19 @@ hr.right:after {
   text-align: justify;
   }
 
-@media only screen and (max-width: 400px) {
+.footer{
+    background-color: #132447;
+    min-height: 60px;
+    padding-top: 20px;
+    color: white;
+    font-size: 12px;
+  }
+
+.copyright_notice{
+  padding-left: 20px;
+}
+
+@media only screen and (max-width: 420px) {
 
   hr.right{
     margin-left: 0%;
@@ -173,17 +243,28 @@ hr.right:after {
 
 }
 
-@media only screen and (min-width: 401px) and (max-width: 960px) {
+@media only screen and (min-width: 421px) and (max-width: 960px) {
 
 }
 
 @media only screen and (min-width: 961px) {
-  .page {
-    width: 960px;
+  .content {
+    width: 940px;
     margin: 0 auto;
   }
+
   .presentation{
-    padding-left:50px;
-    padding-right:50px;
+    width: 940px;
+    margin: 0 auto;
+  }
+
+  .submenu{
+    width: 940px;
+    margin: 0 auto;
+  }
+
+  .copyright_notice{
+    width: 940px;
+    margin: 0 auto;
   }
 }
