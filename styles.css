@@ -225,6 +225,7 @@ hr.right:after {
 
 .text_column_left{
   flex: initial;
+  flex-shrink: 0;
   width: 65%;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -234,6 +235,7 @@ hr.right:after {
 
 .text_column_right{
   flex: initial;
+  flex-shrink: 0;
   width: 65%;
   padding-top: 40px;
   padding-bottom: 40px;
