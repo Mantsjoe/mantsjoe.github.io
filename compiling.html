@@ -19,34 +19,49 @@
         </ul>
       </div>
       <div class="presentation">
-      <div class="name"> <h1>Of compiling and compilers </h1> <h3>xyz</h3></div>
+      <img class="portrait" src="binary.jpg">
+      <div class="name"> <h1>Compiling and compilers </h1> <h3>A very short introduction</h3></div>
       </div>
       <ul class="submenu">
-      <li><a href="#about_me">About me</a></li>
-      <li><a href="#work_experience">Work experience</a></li>
-      <li><a href="#education">Education</a></li><br/ class="menu_break">
-      <li><a href="#hobbies">Spare time</a></li>
+      <li><a href="#machine_source">Machine code and source code</a></li>
+      <li><a href="#compiled_interpreted">Compiled or interpreted</a></li>
+      <li><a href="#compilation">Compilation process</a></li><br/ class="menu_break">
+      <li><a href="#decompiling">Decompiling</a></li>
       </ul>
     </div>
     <div class="content">
-      <div class="about_me" id="about_me">
-        <div class="subtitle_column_left"><h3>About me</h3></div>
-        <div class="text_column_right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus nisi efficitur lacinia vestibulum. Etiam sagittis rhoncus leo, vel varius diam cursus sit amet. Aenean facilisis, risus a pulvinar suscipit, ipsum justo faucibus massa, vitae tincidunt libero dui semper est. Proin lobortis libero quis tristique egestas. Fusce metus justo, ornare vel neque sit amet, viverra rutrum sapien. Sed quis felis pretium, tincidunt ligula et, dictum lacus. Ut ac lobortis turpis, a commodo est. Nunc sed fermentum sem. Maecenas vulputate eget nisi quis pulvinar.</div>
+      <div class="about_me" id="machine_source">
+        <div class="subtitle_column_left"><h3>Machine code and source code</h3></div>
+        <div class="text_column_right">The compilation process is one of the most magical aspects of software development, especially for someone who has been taught that all things digital consists of series of ones and zeros (called <strong>binary code</strong> or <strong>machine code</strong>) and surprises a software developer writing some much more readable code (called <strong>source code</strong>). To bridge the gap between what a developer can read and write (source code is qualified - using a clunky word - as human-readable) and what a processor can read and write, a developer relies on a compiler. The compiler translates source code into machine code - and ensures in the process that developers get enough coffee breaks....<br/>
+        <img class="illustration" src="https://i.stack.imgur.com/0YCwL.png">
+      </div>
       </div>
       <hr class="left">
-      <div class="about_me" id="work_experience">
-        <div class="text_column_left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus nisi efficitur lacinia vestibulum. Etiam sagittis rhoncus leo, vel varius diam cursus sit amet. Aenean facilisis, risus a pulvinar suscipit, ipsum justo faucibus massa, vitae tincidunt libero dui semper est. Proin lobortis libero quis tristique egestas. Fusce metus justo, ornare vel neque sit amet, viverra rutrum sapien. Sed quis felis pretium, tincidunt ligula et, dictum lacus. Ut ac lobortis turpis, a commodo est. Nunc sed fermentum sem. Maecenas vulputate eget nisi quis pulvinar. Mauris interdum bibendum urna non aliquet. Suspendisse non dolor justo. Nullam enim quam, suscipit quis purus in, imperdiet congue ex. Donec convallis eu magna sit amet tristique. </div>
-        <div class="subtitle_column_right"><h3>What I did before</h3></div>
+      <div class="about_me" id="compiled_interpreted">
+        <div class="text_column_left"><p>Before we have a closer look at the actual compilation process, we need to add some more nuance and introduce the difference between compiled and interpreted programming languages.</p>
+          <p>The first group, the <strong>compiled languages</strong> (think of C, C++ or a younger language such as Swift) are directly converted into code the processor can execute (machine code). This approach yields generally faster execution times. The main disadvantage of compiled languages is that development teams need to build different versions of their application for each processor type that needs to be supported, since the outputted machine code is specific to a particular processor architecture.</p>
+          <p>The second group, the <strong>interpreted</strong> languages are either ‘translated’ at runtime by an interpreter running on a target device into a set of instructions for the processor or converted into an intermediate form, called intermediate representation, which is executed in a virtual machine on the target device. One of the most popular examples is Java, which is compiled to Java bytecode that is running inside the Java Virtual Machine on your device. The advantage of this group of languages is increased flexibility: the same version of a program can run on a wide range of devices as long as there is an interpreter or virtual machine that translates it into instructions for a particular compiler. Or using Sun Microsystem’s 1995 slogan: <em>“Write once, run anywhere.”</em></p>
+          <p>As a final aside, it is worth noting that the distinction between the two categories of languages is far from clear-cut. Java itself could be considered as a hybrid form. Another interesting example of an in-between solution is <a href="https://www.infoq.com/articles/ios-9-bitcode/" target="_blank">the possibility Apple has started offering iOS developers to include an intermediate representation of their code, called (LLVM) bitcode, into the package they upload to the App Store</a>. Contrary to the Android ecosystem (which is built on interpreted languages Java and Swit), the intermediate representation is not loaded onto target devices but allows Apple to, among other things, optimize the application without involving the original development team. For the end-users nothing changes: they still download their applications in the form of machine code.</p>
+        </div>
+        <div class="subtitle_column_right"><h3>Compiled and interpreted languages</h3></div>
       </div>
       <hr class="right">
-      <div class="about_me" id="education">
-        <div class="subtitle_column_left"><h3>What I studied</h3></div>
-        <div class="text_column_right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus nisi efficitur lacinia vestibulum. Etiam sagittis rhoncus leo, vel varius diam cursus sit amet. Aenean facilisis, risus a pulvinar suscipit, ipsum justo faucibus massa, vitae tincidunt libero dui semper est. Proin lobortis libero quis tristique egestas. Fusce metus justo, ornare vel neque sit amet, viverra rutrum sapien. Sed quis felis pretium, tincidunt ligula et, dictum lacus. Ut ac lobortis turpis, a commodo est. Nunc sed fermentum sem. Maecenas vulputate eget nisi quis pulvinar. Mauris interdum bibendum urna non aliquet. Suspendisse non dolor justo. Nullam enim quam, suscipit quis purus in, imperdiet congue ex. Donec convallis eu magna sit amet tristique. </div>
+      <div class="about_me" id="compilation">
+        <div class="subtitle_column_left"><h3>Stages of the compilation process</h3></div>
+        <div class="text_column_right"><p>Now that we have covered the differences between compiled and interpreted languages, let us have a look at what happens during the compilation process. More precisely, we will have a look at the four stages of the compilation of a good old C program.</p>
+          <ol>
+              <li><strong>Preprocessing.</strong> During the pre-processing stage, the source code is transformed into pure and self-contained C code, by, among other things, removing comments, including functions and variables missing from the source code, etc.</li>
+              <li><strong>Compilation.</strong> In the second stage, the output of the pre-processing stage is translated into assembly (see illustration), a set of instructions still in human-readable form but specific to a particular processor architecture.<br/><img class="illustration" src="assy-sample.png"></li>
+              <li><strong>Assembly.</strong> In the assembly stage, the human-readable machine instructions are translated into pure binary code or machine code (also called object code).</li>
+              <li><strong>Linking.</strong> The final stage of the compilation ensures that the outputted object files are correctly linked to each other by ensuring the functional calls refer to their function definitions. It outputs the program either as an executable file or a library.</li>
+          </ol>
+          </div>
       </div>
       <hr class="left">
-      <div class="about_me" id="hobbies">
-        <div class="text_column_left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus nisi efficitur lacinia vestibulum. Etiam sagittis rhoncus leo, vel varius diam cursus sit amet. Aenean facilisis, risus a pulvinar suscipit, ipsum justo faucibus massa, vitae tincidunt libero dui semper est. Proin lobortis libero quis tristique egestas. Fusce metus justo, ornare vel neque sit amet, viverra rutrum sapien. Sed quis felis pretium, tincidunt ligula et, dictum lacus. Ut ac lobortis turpis, a commodo est. Nunc sed fermentum sem. Maecenas vulputate eget nisi quis pulvinar. Mauris interdum bibendum urna non aliquet. Suspendisse non dolor justo. Nullam enim quam, suscipit quis purus in, imperdiet congue ex. Donec convallis eu magna sit amet tristique. </div>
-        <div class="subtitle_column_right"><h3>What I do in my spare time</h3></div>
+      <div class="about_me" id="decompiling">
+        <div class="text_column_left"><p>Anything that has been done, can be undone - and that is to a certain degree also true for the process of compilation. For a number of different reasons, both legitimate and malicious, a developer or a development team can try to undo the compilation process and try to obtain a human-readable form of code based on machine code (or an intermediate representation such as bytecode). That person or that team can use a <strong>decompiler</strong> to try and obtain readable source code (or a <strong>disassembler</strong> to obtain assembly). The process of decompilation relies to a large extent on interpretation as part of the original information was lost during the compilation process and the resulting code is at best a reconstruction. To prevent third parties from decompiling their programs, developers can obfuscate their applications, i.e. replace the initial code with a functionally equivalent but much harder to interpret alternative - but that is a subject for another conversation.</p>
+        </div>
+        <div class="subtitle_column_right"><h3>Undoing what was done</h3></div>
       </div>
     </div>
     <div class="footer"><div class=copyright_notice>© 2021 Steven Surdiacourt. All rights reserved.</div>

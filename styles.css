@@ -24,6 +24,23 @@ a:hover{
   text-decoration-line: none;
 }
 
+strong{
+  color: #355594;
+}
+
+ol{
+  list-style-position: inside;
+  color: 
+  }
+
+ol > li{
+  padding-bottom: 1em;
+}
+
+ol > li:last-child{
+  padding-bottom: 0px;
+}
+
 hr.left{
   border-top: solid 2px #355594;
   border-bottom: none;
@@ -149,6 +166,11 @@ hr.right:after {
   border-style:double;
   border-color: #355594;
   border-width: thick;
+  }
+
+.illustration{
+  padding-top: 20px;
+  width: 320px;
   }
 
 .submenu{
