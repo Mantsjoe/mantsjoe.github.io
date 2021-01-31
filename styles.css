@@ -61,7 +61,6 @@ hr.right:after {
 .page{
   display: flex;
   flex-direction: column;
-  height: 100vh;
   font-family: Lato, sans-serif;
   font-size: 12;
   color: #444444;
@@ -264,6 +263,7 @@ hr.right:after {
     background-color: #132447;
     min-height: 60px;
     padding-top: 20px;
+    margin-top: 20px;
     color: white;
     font-size: 12px;
   }
