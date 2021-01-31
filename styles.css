@@ -4,6 +4,26 @@
   box-sizing: border-box;
 }
 
+p{
+  padding-bottom: 1em;
+}
+
+p:last-child{
+  padding-bottom: 0px;
+}
+
+a{
+  color: #355594;
+}
+
+a:visited{
+  color: #355594;
+}
+
+a:hover{
+  text-decoration-line: none;
+}
+
 hr.left{
   border-top: solid 2px #355594;
   border-bottom: none;
@@ -224,7 +244,6 @@ hr.right:after {
   }
 
 .text_column_left{
-  flex: initial;
   flex-shrink: 0;
   width: 65%;
   padding-top: 40px;
@@ -234,7 +253,6 @@ hr.right:after {
     }
 
 .text_column_right{
-  flex: initial;
   flex-shrink: 0;
   width: 65%;
   padding-top: 40px;
