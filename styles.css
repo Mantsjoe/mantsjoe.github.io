@@ -30,7 +30,7 @@ strong{
 
 ol{
   list-style-position: inside;
-  color: 
+  color:
   }
 
 ol > li{
@@ -294,7 +294,8 @@ hr.right:after {
   padding-left: 20px;
 }
 
-@media only screen and (max-width: 420px) {
+@-moz-document url-prefix() {
+  @media only screen and (max-width: 420px) {
 
   hr.right{
     margin-left: 0%;
@@ -353,6 +354,7 @@ hr.right:after {
     padding-top: 20px;
   }
 
+}
 }
 
 @media only screen and (min-width: 421px) and (max-width: 960px) {
